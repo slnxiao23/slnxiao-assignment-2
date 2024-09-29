@@ -18,3 +18,9 @@ def test_index_route(client):
     assert response.status_code == 200
     assert b'<!DOCTYPE html>' in response.data  # Check if the HTML structure is present
 
+
+# Dummy test to verify pytest is running
+def test_dummy():
+    """A dummy test to check if pytest is running."""
+    assert 1 == 1
+
