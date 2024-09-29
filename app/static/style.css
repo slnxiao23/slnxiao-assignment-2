@@ -1,0 +1,126 @@
+/* General Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f1e3dd; /* Light background */
+    color: #667292;  /* Darker text for readability */
+    margin: 0;
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Main Container with Neumorphic Effect */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #cfe0e8; /* Light neutral container background */
+    padding: 40px;
+    box-shadow: 20px 20px 60px #bccad6, -20px -20px 60px #ffffff;
+    border-radius: 30px;
+    text-align: center;
+}
+
+/* Header */
+h1 {
+    font-size: 36px;
+    color: #667292;  /* Darker text for headers */
+    margin-bottom: 25px;
+}
+
+/* Controls Section */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 0 30px;
+}
+
+label {
+    font-weight: bold;
+    font-size: 18px;
+    margin-right: 10px;
+    color: #8d9db6;  /* Softer text color for labels */
+}
+
+/* Input and Select Box with Neumorphic Effect */
+input, select {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 15px;
+    border: none;
+    background-color: #b7d7e8;  /* Light blue background for inputs */
+    box-shadow: inset 10px 10px 20px #bccad6, inset -10px -10px 20px #ffffff;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, select:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px #87bdd8; /* Slight blue glow on focus */
+}
+
+/* Button Section */
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px 30px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #f1e3dd;  /* Light text on buttons */
+    background-color: #87bdd8;  /* Blue buttons */
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px #bccad6, -10px -10px 20px #ffffff;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #8d9db6; /* Darker blue on hover */
+    box-shadow: 5px 5px 10px #bccad6, -5px -5px 10px #ffffff;
+}
+
+/* Visualization Plot */
+#plot {
+    width: 100%;
+    height: 600px;
+    margin-top: 40px;
+    border-radius: 30px;
+    background-color: #daebe8;  /* Light plot area */
+    box-shadow: 20px 20px 60px #bccad6, -20px -20px 60px #ffffff;
+}
+
+/* Make the container and controls more responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .controls {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+    }
+
+    label {
+        margin-bottom: 10px;
+    }
+
+    input, select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    button {
+        width: 100%;
+        max-width: 200px;
+    }
+}
