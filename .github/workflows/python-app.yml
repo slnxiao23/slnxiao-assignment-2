@@ -25,9 +25,3 @@ jobs:
     - name: Install dependencies
       run: make install
 
-    # Step 4: Run the application (Flask) without keeping it running forever
-    - name: Run Flask Application
-      run: |
-        make run &
-        sleep 10
-        pkill flask
