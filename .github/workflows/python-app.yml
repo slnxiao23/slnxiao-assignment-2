@@ -1,5 +1,4 @@
-# .github/workflows/python-app.yml
-name: Python Application Workflow
+name: Python application
 
 on:
   push:
@@ -12,20 +11,23 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # Step 1: Checkout the code from the repo
+    # Step 1: Checkout the code
     - name: Checkout code
       uses: actions/checkout@v4
 
-    # Step 2: Set up Python environment
+    # Step 2: Set up Python 3.10 environment
     - name: Set up Python 3.10
       uses: actions/setup-python@v3
       with:
         python-version: "3.10"
 
-    # Step 3: Install dependencies using Makefile
+    # Step 3: Install dependencies
     - name: Install dependencies
       run: make install
 
-    # Step 4: Run the Flask application
+    # Step 4: Run the application (Flask) without keeping it running forever
     - name: Run Flask Application
-      run: make run
+      run: |
+        make run &
+        sleep 10
+        pkill flask
